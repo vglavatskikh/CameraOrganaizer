@@ -32,6 +32,7 @@
             this.txtDir = new System.Windows.Forms.TextBox();
             this.btnDir = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
+            this.fldBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStart)).BeginInit();
@@ -60,7 +61,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
             this.tableLayoutPanel2.Controls.Add(this.lblFilenameTpl, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtTpl, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblPosition, 2, 0);
@@ -130,6 +131,7 @@
             this.btnDir.TabIndex = 5;
             this.btnDir.Text = "Directory";
             this.btnDir.UseVisualStyleBackColor = true;
+            this.btnDir.Click += new System.EventHandler(this.btnDir_Click);
             // 
             // btnStart
             // 
@@ -142,6 +144,11 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // fldBrowser
+            // 
+            this.fldBrowser.Description = "Choose where located media files";
+            this.fldBrowser.ShowNewFolderButton = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,6 +156,7 @@
             this.ClientSize = new System.Drawing.Size(652, 262);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CameraOrganaizer";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -169,6 +177,7 @@
         private System.Windows.Forms.TextBox txtDir;
         private System.Windows.Forms.Button btnDir;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.FolderBrowserDialog fldBrowser;
     }
 }
 
